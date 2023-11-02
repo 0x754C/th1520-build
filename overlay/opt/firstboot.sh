@@ -38,5 +38,9 @@ dpkg-reconfigure openssh-server
 # enable rc-local service
 systemctl enable rc-local
 
+# chromium sandbox is not working
+sed -i -e 's/\/usr\/bin\/chromium/\/usr\/bin\/chromium --no-sandbox/g' /usr/share/applications/chromium.desktop
+sed -i -e 's/exo-open --launch WebBrowser/\/usr\/bin\/chromium --no-sandbox/g' /usr/share/applications/xfce4-web-browser.desktop
+
 # rotate lightdm
 sed -ie 's/#display-setup-script=/display-setup-script=\/opt\/display-setup.sh/g' /etc/lightdm/lightdm.conf
