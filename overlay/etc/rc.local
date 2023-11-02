@@ -1,3 +1,6 @@
 #!/bin/sh
 
+# bluetooth driver
+/usr/bin/hciattach ttyS4 any 1500000
+
 exit 0
