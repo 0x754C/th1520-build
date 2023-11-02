@@ -1,0 +1,53 @@
+From bc6cb928970ef06203b618224ab19b6181020f2c Mon Sep 17 00:00:00 2001
+From: Lu Hui <luhui@sipeed.com>
+Date: Thu, 2 Nov 2023 14:41:34 +0800
+Subject: [PATCH 10/13] dts: light-lpi4a-console: add LicheeConsole devicetree
+
+---
+ arch/riscv/boot/dts/thead/Makefile            |  1 +
+ .../boot/dts/thead/light-lpi4a-console.dts    | 21 +++++++++++++++++++
+ 2 files changed, 22 insertions(+)
+ create mode 100644 arch/riscv/boot/dts/thead/light-lpi4a-console.dts
+
+diff --git a/arch/riscv/boot/dts/thead/Makefile b/arch/riscv/boot/dts/thead/Makefile
+index f5ead3e5c..af4868d45 100644
+--- a/arch/riscv/boot/dts/thead/Makefile
++++ b/arch/riscv/boot/dts/thead/Makefile
+@@ -47,6 +47,7 @@ dtb-$(CONFIG_SOC_THEAD) += fire-emu.dtb fire-emu-crash.dtb
+ dtb-$(CONFIG_SOC_THEAD) += fire-emu-soc-base.dtb fire-emu-soc-c910x4.dtb fire-emu-gpu-dpu-dsi0.dtb fire-emu-vi-dsp-vo.dtb fire-emu-vi-vp-vo.dtb
+ dtb-$(CONFIG_SOC_THEAD) += fire-emu-soc-base-sec.dtb
+ dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-laptop.dtb
++dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-console.dtb
+ 
+ targets += dtbs dtbs_install
+ targets += $(dtb-y)
+diff --git a/arch/riscv/boot/dts/thead/light-lpi4a-console.dts b/arch/riscv/boot/dts/thead/light-lpi4a-console.dts
+new file mode 100644
+index 000000000..4ab4f5a23
+--- /dev/null
++++ b/arch/riscv/boot/dts/thead/light-lpi4a-console.dts
+@@ -0,0 +1,21 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++/*
++ * Copyright (C) 2023 Sipeed.
++ */
++
++#include "light-lpi4a-laptop.dts"
++
++/ {
++        model = "T-HEAD Light Lichee Pi 4A configuration for LicheeConsole4A";
++};
++
++&dsi0_panel0 {
++	compatible = "mingjun,mj070bi30ia2";
++};
++
++&i2c0 {
++	ydx@15 {
++		compatible = "ydx";
++		reg = <0x15>;
++	};
++};
+-- 
+2.34.1
+
