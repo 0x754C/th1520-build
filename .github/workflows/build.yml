@@ -66,6 +66,10 @@ jobs:
       - name: Make Image
         run: |
               cd th1520-build
+              echo "$USER:100000:65536" > subgid
+              echo "$USER:100000:65536" > subuid
+              sudo cp subgid /etc/
+              sudo cp subuid /etc/
               sh ./mklinux.sh
               sh ./mkrootfs.sh
               fakeroot sh ./mkimg.sh
