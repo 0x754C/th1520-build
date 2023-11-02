@@ -7,7 +7,7 @@ then
 	export URL="https://github.com/revyos/thead-kernel"
 fi
 
-if [ -z "BRANCH" ]
+if [ -z "$BRANCH" ]
 then
 	export BRANCH="lpi4a"
 fi
@@ -26,7 +26,7 @@ set -eux
 
 if [ ! -e build/linux ] 
 then
-	git clone $URL build/linux --branch=$(BRANCH)
+	git clone $URL build/linux --branch=${BRANCH}
 fi
 
 cd build/linux
@@ -36,8 +36,8 @@ export INSTALL_MOD_PATH=$(pwd)/_install/
 if [ -e ${INSTALL_PATH} ]
 then
 	rm -rf ${INSTALL_PATH}
-	mkdir -p ${INSTALL_PATH}
 fi
+mkdir -p ${INSTALL_PATH}
 make mrproper
 make $CONFIG
 make -j$(nproc)
