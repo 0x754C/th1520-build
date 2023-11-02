@@ -9,6 +9,10 @@ parted -s /dev/mmcblk0 "resizepart 3 -0"
 resize2fs /dev/mmcblk0p2
 resize2fs /dev/mmcblk0p3
 
+# generate locale data
+echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+locale-gen
+
 # add normal user
 useradd -s /bin/bash -m -k /etc/skel sipeed
 echo 'sipeed:licheepi' | chpasswd
