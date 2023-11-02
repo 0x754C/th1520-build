@@ -34,7 +34,7 @@ deb https://mirror.iscas.ac.cn/revyos/revyos-addons/ revyos-addons main
 	fcitx5-frontend-qt6 eject network-manager-gnome lightdm \
 	desktop-base xorg alsa-utils pulseaudio dbus-user-session udisks2 \
 	polkitd squashfs-tools xfce4 xinit xinput evtest device-tree-compiler\
-	" > ./build/rootfs.tar
+	xfce4-terminal" > ./build/rootfs.tar
 }
 
 # if you want skip debian rootfs build, please comment this line:
