@@ -29,6 +29,7 @@ echo "$NEW_HOSTNAME" > /etc/hostname
 echo "127.0.0.1	$NEW_HOSTNAME" > /etc/hosts
 hostname "$NEW_HOSTNAME"
 nmcli general hostname "$NEW_HOSTNAME"
+cp /usr/share/doc/avahi-daemon/examples/sftp-ssh.service  /etc/avahi/services/
 systemctl enable avahi-daemon
 
 # regenerate openssh host keys
