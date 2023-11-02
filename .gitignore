@@ -1,0 +1,4 @@
+overlay/boot/Image
+overlay/boot/dtbs/*
+overlay/usr/lib/modules/*
+build/*
