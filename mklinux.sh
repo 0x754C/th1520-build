@@ -27,6 +27,12 @@ set -eux
 if [ ! -e build/linux ] 
 then
 	git clone $URL build/linux --branch=${BRANCH}
+	cd build/linux
+	find ../../linux/ -name *.patch | sort | while read line
+	do
+		patch -p1 < $line
+	done
+	cd ../../
 fi
 
 cd build/linux
