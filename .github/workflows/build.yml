@@ -1,4 +1,4 @@
-name: mkimg-th1520-ci
+name: th1520-build-ci
 
 on:
   push:
@@ -10,9 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  xuetie_toolchain: https://occ-oss-prod.oss-cn-hangzhou.aliyuncs.com/resource//1663142514282
-  toolchain_file_name: Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.1-20220906.tar.gz
   ARCH: riscv
+  CROSS_COMPILE: riscv64-linux-gnu-
 
 jobs:
   mkrootfs:
@@ -22,18 +21,15 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Create Timestamp
-        run: |
-              echo "BUILD_ID=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_ENV
-              echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
-
       - name: Install Software
         run: |
               sudo apt update && \
-              sudo apt install -y gdisk dosfstools build-essential autoconf automake autotools-dev ninja-build make \
-                                  libncurses-dev gawk flex bison openssl libssl-dev tree \
-                                  gcc-riscv64-linux-gnu gfortran-riscv64-linux-gnu libgomp1-riscv64-cross \
-                                  qemu-user-static binfmt-support mmdebstrap 
+              sudo apt install -y gdisk dosfstools build-essential \
+                autoconf automake autotools-dev ninja-build make \
+                libncurses-dev gawk flex bison openssl libssl-dev tree \
+                gcc-riscv64-linux-gnu gfortran-riscv64-linux-gnu \
+                libgomp1-riscv64-cross qemu-user-static binfmt-support \
+                mmdebstrap
               wget https://mirror.iscas.ac.cn/revyos/revyos-addons/pool/main/r/revyos-keyring/revyos-keyring_2023.06.12_all.deb
               sudo apt install ./revyos-keyring_2023.06.12_all.deb
 
@@ -65,29 +61,21 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
-            path: 'mkimg-th1520'  # TODO: make this name a global variable
+            path: 'th1520-build'  # TODO: make this name a global variable
 
       - name: Make Image
         run: |
-              export PATH="/opt/Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.1/bin:$PATH"
-
-              # make revyos-release on CI
-              pushd mkimg-th1520
-                echo "BUILD_ID=${{ env.BUILD_ID }}" >> revyos-release
-                echo "BUILD_DATE=${{ env.BUILD_DATE }}" >> revyos-release
-                echo "RELEASE_ID=${{ github.ref_name }}" >> revyos-release
-                echo "COMMIT_ID=${{ github.sha }}" >> revyos-release
-                echo "RUNNER_ID=${{ github.run_id }}" >> revyos-release
-                sudo ./mkrootfs.sh
-              popd
+              cd th1520-build
+              sh ./mklinux.sh
+              sh ./mkrootfs.sh
+              fakeroot sh ./mkimg.sh
+              cd ..
 
       - name: Make Checksum file & Compress files
         run: |
-            pushd mkimg-th1520
-              sha256sum *.ext4 > SHA256SUMS
-              sha512sum *.ext4 > SHA512SUMS
-              zstd *.ext4
-            popd
+              cd th1520-build
+              sha256sum build/*.lz4 > SHA256SUMS
+              cd ..
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
@@ -95,16 +83,14 @@ jobs:
           retention-days: 30
           name: th1520-${{ env.BUILD_ID }}
           path: |
-                  mkimg-th1520/*.ext4.zst
-                  mkimg-th1520/SHA256SUMS
-                  mkimg-th1520/SHA512SUMS
+                  th1520-build/build/SHA256SUMS
+                  th1520-build/build/*.lz4
 
       - name: 'Create release by tag'
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-                  mkimg-th1520/*.ext4.zst
-                  mkimg-th1520/SHA256SUMS
-                  mkimg-th1520/SHA512SUMS
+                  th1520-build/build/sha256SUMS
+                  th1520-build/build/*.lz4
           token: ${{ secrets.GITHUB_TOKEN }}
