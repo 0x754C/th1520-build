@@ -48,3 +48,7 @@ sed -i -e 's/exo-open --launch WebBrowser/\/usr\/bin\/chromium --no-sandbox/g' /
 
 # rotate lightdm
 sed -ie 's/#display-setup-script=/display-setup-script=\/opt\/display-setup.sh/g' /etc/lightdm/lightdm.conf
+
+# default wallaper
+ln -sf /usr/share/images/ruyisdk/ruyi-1-1920x1080.png /usr/share/images/desktop-base/desktop-background
+ln -sf /usr/share/images/ruyisdk/ruyi-2-1920x1080.png /usr/share/images/desktop-base/login-background.svg
