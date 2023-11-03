@@ -1,11 +1,6 @@
 name: th1520-build-ci
 
 on:
-  push:
-    tags:        
-      - '*'
-    branches:
-      - '*'
   pull_request:
   workflow_dispatch:
 
