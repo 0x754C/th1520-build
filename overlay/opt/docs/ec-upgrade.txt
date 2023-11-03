@@ -1,0 +1,98 @@
+How to upgrade ec:
+
+It is dangerous to update EC on engineering machines. Please be sure to read it before proceeding. If you make a mistake, the EC will become bricked. Then you need to disassemble the shell and use a test pin to re-flash the EC.
+
+1. install wchisp:
+
+curl -O https://github.com/0x754C/th1520-build/releases/download/ec-upgrade/wchisp
+chmod +x wchisp
+
+2. verify wchisp is working:
+
+./wchisp
+
+output:
+
+01:27:04 [INFO] Found 0 devices
+01:27:04 [INFO] hint: use `wchisp info` to check chip info
+
+3. download new ec firmware:
+
+https://github.com/0x754C/th1520-build/releases
+
+4. start flash loop, must use root user!
+
+while true
+do
+	./wchisp flash ./ch582m.bin
+done
+
+5. connect ec console
+
+start a new terminal
+
+use command:
+
+picocom -b 9600 /dev/ttyUSB0
+
+this console not have echo.
+
+when termianl connected type:
+
+version <CR> 
+
+then you will get a reponse:
+
+version: 20231103
+
+then type:
+
+flashmode 20231103 <CR>
+
+your wchisp will start work:
+
+01:34:50 [INFO] Chip: CH582[0x8216] (Code Flash: 448KiB, Data EEPROM: 32KiB)
+01:34:50 [INFO] Chip UID: 83-34-0F-A7-14-54-A6-2F
+01:34:50 [INFO] BTVER(bootloader ver): 02.40
+01:34:50 [INFO] Current config registers: ffffffffffffffff4f3f0f4d
+RESERVED: 0xFFFFFFFF
+WPROTECT: 0xFFFFFFFF
+  [0:0]   NO_KEY_SERIAL_DOWNLOAD 0x1 (0b1)
+    `- Enable
+  [1:1]   DOWNLOAD_CFG 0x1 (0b1)
+    `- PB22(Default set)
+USER_CFG: 0x4D0F3F4F
+  [2:0]   RESERVED 0x7 (0b111)
+    `- Changed
+  [3:3]   CFG_RESET_EN 0x1 (0b1)
+    `- Enable
+  [4:4]   CFG_DEBUG_EN 0x0 (0b0)
+    `- Disable
+  [5:5]   RESERVED 0x0 (0b0)
+  [6:6]   CFG_BOOT_EN 0x1 (0b1)
+    `- Enable
+  [7:7]   CFG_ROM_READ 0x0 (0b0)
+    `- Disable the programmer to read out, and keep the program secret
+  [27:8]  RESERVED 0xD0F3F (0b11010000111100111111)
+    `- Changed
+  [31:28] VALID_SIG 0x4 (0b100)
+    `- Valid
+01:34:50 [INFO] Read ch582m.bin as Binary format
+01:34:50 [INFO] Firmware size: 25600
+01:34:50 [INFO] Erasing...
+01:34:50 [INFO] Erased 26 code flash sectors
+01:34:51 [INFO] Erase done
+01:34:51 [INFO] Writing to code flash...
+████████████████████████████████████████████████████████████████████ 25600/2560001:34:52 [INFO] Code flash 25600 bytes written
+01:34:52 [INFO] Verifying...
+████████████████████████████████████████████████████████████████████ 25600/2560001:34:52 [INFO] Verify OK
+01:34:52 [INFO] Now reset device and skip any communication errors
+01:34:52 [INFO] Device reset
+
+after this, your ec is upgrade into new firmware:
+
+version <CR>
+
+reply
+
+version: FLAHSHED FIRMWARE VERSION
