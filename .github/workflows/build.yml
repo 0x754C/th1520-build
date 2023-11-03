@@ -74,6 +74,7 @@ jobs:
         run: |
               cd th1520-build
               sha256sum build/*.lz4 > SHA256SUMS
+              sha256sum build/*.bin >> SHA256SUMS
               cd ..
 
       - name: 'Upload Artifact'
@@ -84,6 +85,7 @@ jobs:
           path: |
                   th1520-build/build/SHA256SUMS
                   th1520-build/build/*.lz4
+                  th1520-build/build/*.bin
 
       - name: 'Create release by tag'
         uses: softprops/action-gh-release@v1
@@ -92,4 +94,5 @@ jobs:
           files: |
                   th1520-build/build/SHA256SUMS
                   th1520-build/build/*.lz4
+                  th1520-build/build/*.bin
           token: ${{ secrets.GITHUB_TOKEN }}
