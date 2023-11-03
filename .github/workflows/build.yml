@@ -95,6 +95,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-                  th1520-build/build/sha256SUMS
+                  th1520-build/build/SHA256SUMS
                   th1520-build/build/*.lz4
           token: ${{ secrets.GITHUB_TOKEN }}
