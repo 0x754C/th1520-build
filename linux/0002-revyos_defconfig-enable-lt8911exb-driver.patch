@@ -1,4 +1,4 @@
-From 4a45c0ea4632c9b8612bc31d3694696af17a3f6d Mon Sep 17 00:00:00 2001
+From 3a8dd97256eb87083b70eb7ef43f0478d197d871 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 11:07:00 +0800
 Subject: [PATCH 02/13] revyos_defconfig: enable lt8911exb driver

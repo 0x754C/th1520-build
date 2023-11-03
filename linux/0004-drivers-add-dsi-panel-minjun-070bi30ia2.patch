@@ -1,4 +1,4 @@
-From 6aef450e69df228a1158c430f9aa9911d18a7969 Mon Sep 17 00:00:00 2001
+From f0cc53259cbb7b8601db6e99f37843666455b817 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:37:49 +0800
 Subject: [PATCH 04/13] drivers: add dsi panel minjun 070bi30ia2

@@ -1,4 +1,4 @@
-From bc6cb928970ef06203b618224ab19b6181020f2c Mon Sep 17 00:00:00 2001
+From a7f5cec12159e6504d5ffcd55afbb0877f0ea2a4 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:41:34 +0800
 Subject: [PATCH 10/13] dts: light-lpi4a-console: add LicheeConsole devicetree

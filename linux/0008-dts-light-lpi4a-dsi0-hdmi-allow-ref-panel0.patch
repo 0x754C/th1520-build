@@ -1,4 +1,4 @@
-From bf5dbe5cf69fded4a41fbfb4582d0456e0a73ec6 Mon Sep 17 00:00:00 2001
+From 4c9e02f1120265c6d08df769c425b748f66a71ea Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:40:32 +0800
 Subject: [PATCH 08/13] dts: light-lpi4a-dsi0-hdmi: allow ref panel0

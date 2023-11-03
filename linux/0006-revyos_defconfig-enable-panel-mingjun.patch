@@ -1,4 +1,4 @@
-From ce4b030a6ff27bbfef59a3bd2a414d67f11ee781 Mon Sep 17 00:00:00 2001
+From 81a72ec74112437000cbf534390b95fdb10a5c42 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:38:53 +0800
 Subject: [PATCH 06/13] revyos_defconfig: enable panel mingjun

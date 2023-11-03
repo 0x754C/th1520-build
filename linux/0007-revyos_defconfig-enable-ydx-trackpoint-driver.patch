@@ -1,4 +1,4 @@
-From a732a750ceed47b389317a97fde879b780139416 Mon Sep 17 00:00:00 2001
+From 9f1b00abeb911970f820693f03d4edf05a657d50 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:39:29 +0800
 Subject: [PATCH 07/13] revyos_defconfig: enable ydx trackpoint driver

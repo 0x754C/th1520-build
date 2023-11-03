@@ -1,4 +1,4 @@
-From 5de91b26c6cc5de57c4c46ed9996a4fbdfa62712 Mon Sep 17 00:00:00 2001
+From 25e7bae8ee0b5d4576850c4ed238d2c58b56b161 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:51:43 +0800
 Subject: [PATCH 11/13] revyos_defconfig: fix ydx config

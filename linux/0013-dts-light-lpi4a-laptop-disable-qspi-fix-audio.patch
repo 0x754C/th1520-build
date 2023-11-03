@@ -1,4 +1,4 @@
-From 925727c9fbc3044b607a5a8a920b8eba559d911a Mon Sep 17 00:00:00 2001
+From 83aab4a9346d85dd97a61cdb83008409ce44ad8f Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 16:27:03 +0800
 Subject: [PATCH 13/13] dts: light-lpi4a-laptop: disable qspi fix audio

@@ -1,4 +1,4 @@
-From 23870860c136b0d37b7049d9ad3e83044539f68c Mon Sep 17 00:00:00 2001
+From 13ac35bc9b3afd864e0c3fa0571a5ebd3e0c2979 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:41:12 +0800
 Subject: [PATCH 09/13] dts: light-lpi4a-laptop: rewrite device tree for laptop
