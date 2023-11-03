@@ -68,6 +68,7 @@ jobs:
               sh ./mklinux.sh
               sudo sh ./mkrootfs.sh
               fakeroot sh ./mkimg.sh
+              sh ./mkuboot.sh
               cd ..
 
       - name: Make Checksum file & Compress files
