@@ -42,5 +42,6 @@ make -j$(nproc)
 cp u-boot-with-spl.bin ../u-boot-with-spl-sbc-16g.bin
 make clean
 make light_lpi4a_console_defconfig
+cp ../../overlay/boot/logos/sipeed-console.bmp tools/logos/custom.bmp
 make -j$(nproc)
 cp u-boot-with-spl.bin ../u-boot-with-spl-console.bin
