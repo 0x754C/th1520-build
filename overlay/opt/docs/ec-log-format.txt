@@ -1,0 +1,5 @@
+ec log will send to uart3 , baurate is 576000
+
+format:
+
+[0x1][MESSAGE ...][LF][CR]
