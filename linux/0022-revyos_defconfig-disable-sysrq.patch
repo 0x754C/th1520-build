@@ -1,0 +1,33 @@
+From 19496eebe5ab0fddd2b1c145a2731ed14e42c9a8 Mon Sep 17 00:00:00 2001
+From: Lu Hui <luhui@sipeed.com>
+Date: Thu, 9 Nov 2023 13:53:23 +0800
+Subject: [PATCH 22/23] revyos_defconfig: disable sysrq
+
+---
+ arch/riscv/configs/revyos_defconfig | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
+index b7bea3e38..7d97bbfa8 100644
+--- a/arch/riscv/configs/revyos_defconfig
++++ b/arch/riscv/configs/revyos_defconfig
+@@ -201,6 +201,7 @@ CONFIG_GPIO_PCA953X=y
+ CONFIG_GPIO_PCA953X_IRQ=y
+ CONFIG_POWER_SUPPLY=y
+ CONFIG_BATTERY_CW2015=m
++CONFIG_CHARGER_GPIO=y
+ CONFIG_SENSORS_MR75203=y
+ CONFIG_SENSORS_PWM_FAN=y
+ CONFIG_THERMAL=y
+@@ -458,7 +459,7 @@ CONFIG_CMA_SIZE_MBYTES=32
+ CONFIG_PRINTK_TIME=y
+ CONFIG_DYNAMIC_DEBUG=y
+ CONFIG_DEBUG_INFO=y
+-CONFIG_MAGIC_SYSRQ=y
++# CONFIG_MAGIC_SYSRQ is not set
+ CONFIG_DEBUG_FS=y
+ CONFIG_SOFTLOCKUP_DETECTOR=y
+ CONFIG_DEBUG_ATOMIC_SLEEP=y
+-- 
+2.34.1
+
