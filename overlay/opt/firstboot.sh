@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# delay some time before setup
+sleep 20
+
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export PATH
 
@@ -55,6 +58,10 @@ ln -sf /usr/share/images/ruyisdk/ruyi-2-1920x1080.png /usr/share/images/desktop-
 
 # avahi daemon
 sed -i -e 's/publish-workstation=no/publish-workstation=yes/g' /etc/avahi/avahi-daemon.conf
+
+# disable iperf3 service
+systemctl disable iperf3
+systemctl stop iperf3
 
 # reboot this machine after 60s
 shutdown -r 1
