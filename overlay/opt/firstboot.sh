@@ -52,3 +52,9 @@ sed -ie 's/#display-setup-script=/display-setup-script=\/opt\/display-setup.sh/g
 # default wallaper
 ln -sf /usr/share/images/ruyisdk/ruyi-1-1920x1080.png /usr/share/images/desktop-base/desktop-background
 ln -sf /usr/share/images/ruyisdk/ruyi-2-1920x1080.png /usr/share/images/desktop-base/login-background.svg
+
+# avahi daemon
+sed -i -e 's/publish-workstation=no/publish-workstation=yes/g' /etc/avahi/avahi-daemon.conf
+
+# reboot this machine after 60s
+shutdown -r 1
