@@ -1,7 +1,7 @@
-From 486b5f1e21177f31fcc4abe81b0480fcd478a5b3 Mon Sep 17 00:00:00 2001
+From 45dc6fd7129c7885d6928a4b90610742dfb132b7 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 10 Nov 2023 13:44:49 +0800
-Subject: [PATCH 11/11] configs: add cluster config
+Subject: [PATCH 10/12] configs: add cluster config
 
 ---
  configs/light_lpi4a_cluster_16g_defconfig | 110 ++++++++++++++++++++++
