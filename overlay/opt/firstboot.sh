@@ -42,9 +42,6 @@ systemctl enable avahi-daemon
 # regenerate openssh host keys
 dpkg-reconfigure openssh-server
 
-# enable rc-local service
-systemctl enable rc-local
-
 # chromium sandbox is not working
 sed -i -e 's/\/usr\/bin\/chromium/\/usr\/bin\/chromium --no-sandbox/g' /usr/share/applications/chromium.desktop
 sed -i -e 's/exo-open --launch WebBrowser/\/usr\/bin\/chromium --no-sandbox/g' /usr/share/applications/xfce4-web-browser.desktop
@@ -62,6 +59,9 @@ sed -i -e 's/publish-workstation=no/publish-workstation=yes/g' /etc/avahi/avahi-
 # disable iperf3 service
 systemctl disable iperf3
 systemctl stop iperf3
+
+# enable boot setup
+systemctl enable boot-setup
 
 # reboot this machine after 60s
 shutdown -r 1
