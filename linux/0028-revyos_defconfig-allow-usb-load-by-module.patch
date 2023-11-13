@@ -1,0 +1,41 @@
+From e8b066d2a1f36637b1140b0b9e2c2044b6925bd1 Mon Sep 17 00:00:00 2001
+From: Lu Hui <luhui@sipeed.com>
+Date: Mon, 13 Nov 2023 18:10:37 +0800
+Subject: [PATCH 28/28] revyos_defconfig: allow usb load by module
+
+---
+ arch/riscv/configs/revyos_defconfig | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
+index 7d97bbfa8..18bb523c9 100644
+--- a/arch/riscv/configs/revyos_defconfig
++++ b/arch/riscv/configs/revyos_defconfig
+@@ -289,16 +289,17 @@ CONFIG_SND_SOC_WM8960=y
+ CONFIG_SND_SIMPLE_CARD=y
+ CONFIG_SND_AUDIO_GRAPH_CARD=y
+ CONFIG_UHID=y
++CONFIG_USB_HID=m
+ CONFIG_HID_PID=y
+ CONFIG_USB_HIDDEV=y
+-CONFIG_USB=y
+-CONFIG_USB_XHCI_HCD=y
+-CONFIG_USB_XHCI_PLATFORM=y
+-CONFIG_USB_OHCI_HCD=y
++CONFIG_USB=m
++CONFIG_USB_XHCI_HCD=m
++CONFIG_USB_XHCI_PLATFORM=m
++CONFIG_USB_OHCI_HCD=m
+ CONFIG_USB_ACM=m
+-CONFIG_USB_STORAGE=y
+-CONFIG_USB_STORAGE_SDDR09=y
+-CONFIG_USB_STORAGE_SDDR55=y
++CONFIG_USB_STORAGE=m
++CONFIG_USB_STORAGE_SDDR09=m
++CONFIG_USB_STORAGE_SDDR55=m
+ CONFIG_USB_DWC3=m
+ CONFIG_USB_DWC3_HOST=y
+ # CONFIG_USB_DWC3_OF_SIMPLE is not set
+-- 
+2.34.1
+
