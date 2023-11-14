@@ -1,0 +1,11 @@
+ec send data into TH1520's UART3, baurate is 576000
+
+format:
+
+// ref: kproto.pdf
+//  A simple protocol like kermit:
+// [MARK][LEN][SEQ][TYPE][DATA ...][SUM][CR][LF]
+//            |<------LEN - 32-------->|
+//       |<--------SUMRANGE------>|
+
+example in usr/local/src/sipeed-ec-daemon/sipeed-ec-daemon.c
