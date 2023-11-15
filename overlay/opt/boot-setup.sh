@@ -17,7 +17,4 @@ fi
 # bluetooth driver
 /usr/bin/hciattach ttyS4 any 1500000
 
-# mipi2edp
-modprobe lt8911exb
-
 exit 0
