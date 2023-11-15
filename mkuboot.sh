@@ -63,3 +63,7 @@ make clean
 make light_lpi4a_z15inch_m1_defconfig
 make -j$(nproc)
 cp u-boot-with-spl.bin ../u-boot-with-spl-z15inch-m1.bin
+make clean
+make light_lpi4a_z14inch_m0_defconfig
+make -j$(nproc)
+cp u-boot-with-spl.bin ../u-boot-with-spl-z14inch-m0.bin
