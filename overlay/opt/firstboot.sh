@@ -63,5 +63,13 @@ systemctl stop iperf3
 # enable boot setup
 systemctl enable boot-setup
 
+# enable cst3240 userspace driver
+if (cat /proc/device-tree/model | grep Z14INCH-M0);
+then
+	systemctl enable cst3240
+else
+	systemctl disable cst3240
+fi
+
 # reboot this machine after 60s
 shutdown -r 1
