@@ -1,6 +1,6 @@
-From 4567abcfe221ecce4e05878a1b5d6b12efcf9c6e Mon Sep 17 00:00:00 2001
+From f892d8bc973b850cedd7fbd96a4dfd2edb9d2580 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
-Date: Wed, 15 Nov 2023 15:42:54 +0800
+Date: Thu, 16 Nov 2023 10:22:52 +0800
 Subject: [PATCH 30/30] dts: add light-lpi4a-z14inch-m0.dts
 
 ---
