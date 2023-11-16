@@ -323,6 +323,7 @@ send:
 		emit(uinput_fd, EV_KEY, BTN_LEFT, (mouse_cfg.buttons & 0x1));
 		emit(uinput_fd, EV_KEY, BTN_RIGHT, (mouse_cfg.buttons & 0x2));
 		emit(uinput_fd, EV_SYN, SYN_REPORT, 0);
+		mouse_cfg.x = mouse_cfg.y = mouse_cfg.wheel = 0;
 	}
 	exit(EXIT_SUCCESS);
 }
