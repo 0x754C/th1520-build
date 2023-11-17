@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# touch pad
+if (cat /proc/device-tree/model | grep Z14INCH-M0);
+then
+	systemctl start cst3240
+fi
+
 # thank ice
 if (cat /proc/device-tree/model | grep LicheeConsole4A);
 then
@@ -33,3 +39,4 @@ else
 	fi
     fi
 fi
+
