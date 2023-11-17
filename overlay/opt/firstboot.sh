@@ -60,6 +60,9 @@ sed -i -e 's/publish-workstation=no/publish-workstation=yes/g' /etc/avahi/avahi-
 systemctl disable iperf3
 systemctl stop iperf3
 
+# enable ssh
+systemctl enable sshd
+
 # enable boot setup
 systemctl enable boot-setup
 
