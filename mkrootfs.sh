@@ -5,6 +5,11 @@ then
 	MMDEBSTRAP=mmdebstrap
 fi
 
+if [ -z "$GENTOO_ROOTFS_URL" ]
+then
+	GENTOO_ROOTFS_URL="https://mirrors.ustc.edu.cn/gentoo/releases/riscv/autobuilds/current-stage3-rv64_lp64-systemd-mergedusr/stage3-rv64_lp64-systemd-mergedusr-20231110T170202Z.tar.xz"
+fi
+
 mkdir build
 
 set -eux
@@ -41,8 +46,13 @@ deb https://mirror.iscas.ac.cn/revyos/revyos-addons/ revyos-addons main
 	" > ./build/rootfs.tar
 }
 
+genrootfs_gentoo() {
+	curl $GENTOO_ROOTFS_URL | xz -d -c - > build/rootfs.tar
+}
+
 # if you want skip rootfs build, please comment this line:
 genrootfs_debian
+#genrootfs_gentoo
 cd overlay
 for i in *
 do
