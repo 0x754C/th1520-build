@@ -29,8 +29,8 @@ deb https://mirror.iscas.ac.cn/revyos/revyos-addons/ revyos-addons main
 	autoconf automake m4 texinfo grep gawk sed patch diffutils git flex \
 	bison libusb-dev cmake build-essential cscope clangd indent code-oss \
 	qtcreator emacs nvi wireshark tcpdump cataclysm-dda-sdl \
-	nethack-console fcitx5 fcitx5-rime fcitx5-frontend-gtk2 \
-	fcitx5-frontend-gtk3 fcitx5-frontend-gtk4 fcitx5-frontend-qt5 \
+	nethack-console fcitx5 fcitx5-rime rime-data-luna-pinyin fcitx5-frontend-gtk2 \
+	fcitx5-frontend-gtk3 fcitx5-frontend-gtk4 fcitx5-frontend-qt5 fcit5-config-qt\
 	fcitx5-frontend-qt6 eject network-manager-gnome lightdm \
 	desktop-base xorg alsa-utils pulseaudio dbus-user-session udisks2 \
 	polkitd squashfs-tools xfce4 xinit xinput evtest device-tree-compiler\
