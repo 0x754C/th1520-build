@@ -6,7 +6,7 @@ export PATH
 
 # setup uart3 pinmux
 # TODO: move it into devicetree
-busybox devmem 0xFFE7F3C408 w 0x13
+/opt/busybox devmem 0xFFE7F3C408 w 0x13
 
 # for LicheeConsole4A
 if (cat /proc/device-tree/model | grep LicheeConsole4A);
