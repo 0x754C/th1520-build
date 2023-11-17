@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ -z "$DISTRO" ]
+then
+	DISTRO="revyos"
+fi
+
 if [ -z "$MMDEBSTRAP" ]
 then
 	MMDEBSTRAP=mmdebstrap
@@ -14,7 +19,7 @@ mkdir build
 
 set -eux
 
-genrootfs_debian() {
+genrootfs_revyos() {
 echo "deb https://mirror.iscas.ac.cn/revyos/revyos-gles-21/ revyos-gles-21 main
 deb https://mirror.iscas.ac.cn/revyos/revyos-base/ sid main contrib non-free non-free-firmware
 deb https://mirror.iscas.ac.cn/revyos/revyos-kernels/ revyos-kernels main
@@ -50,9 +55,18 @@ genrootfs_gentoo() {
 	curl $GENTOO_ROOTFS_URL | xz -d -c - > build/rootfs.tar
 }
 
-# if you want skip rootfs build, please comment this line:
-genrootfs_debian
-#genrootfs_gentoo
+case "$DISTRO" in
+	revyos)
+		genrootfs_revyos
+		;;
+	gentoo)
+		genrootfs_gentoo
+		;;
+	*)
+		echo "nop"
+		;;
+esac
+
 cd overlay
 for i in *
 do
