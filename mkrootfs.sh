@@ -37,8 +37,8 @@ deb https://mirror.iscas.ac.cn/revyos/revyos-addons/ revyos-addons main
 	polkitd squashfs-tools xfce4 xinit xinput evtest device-tree-compiler\
 	xfce4-terminal busybox xfce4-power-manager xfce4-power-manager-data \
 	xfce4-power-manager-plugins xfce4-battery-plugin xfce4-cpugraph-plugin \
-	xfce4-screensaver linux-cpupower bc dc u-boot-tools libnss-mdns"
-	> ./build/rootfs.tar
+	xfce4-screensaver linux-cpupower bc dc u-boot-tools libnss-mdns \
+	" > ./build/rootfs.tar
 }
 
 # if you want skip debian rootfs build, please comment this line:
