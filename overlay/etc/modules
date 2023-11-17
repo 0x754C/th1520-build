@@ -4,5 +4,3 @@ xhci-hcd
 xhci-plat-hcd
 usbhid
 uvcvideo
-aic8800_bsp
-aic8800_fdrv
