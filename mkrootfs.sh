@@ -9,7 +9,7 @@ mkdir build
 
 set -eux
 
-genrootfs() {
+genrootfs_debian() {
 echo "deb https://mirror.iscas.ac.cn/revyos/revyos-gles-21/ revyos-gles-21 main
 deb https://mirror.iscas.ac.cn/revyos/revyos-base/ sid main contrib non-free non-free-firmware
 deb https://mirror.iscas.ac.cn/revyos/revyos-kernels/ revyos-kernels main
@@ -41,8 +41,8 @@ deb https://mirror.iscas.ac.cn/revyos/revyos-addons/ revyos-addons main
 	" > ./build/rootfs.tar
 }
 
-# if you want skip debian rootfs build, please comment this line:
-genrootfs
+# if you want skip rootfs build, please comment this line:
+genrootfs_debian
 cd overlay
 for i in *
 do
