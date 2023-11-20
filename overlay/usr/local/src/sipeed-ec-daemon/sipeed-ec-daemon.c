@@ -107,6 +107,7 @@ int ewrite(int fd, void *buf, size_t count) {
 #define KHDR_LEN 1
 #define KHDR_SEQ 2
 #define KHDR_TYPE 3
+#define KHDR_SUBTYPE 4
 
 #define SOH 0x1
 
@@ -167,8 +168,8 @@ int recvpkt(int fd, uint8_t *buf, int bufsize) {
 			break;
 		default:
 			len = pktlen(buf);
-			if (bufp == (len - 1)) {
-				if (mksum(buf) != buf[bufp]) {
+			if (bufp >= (len - 1)) {
+				if (mksum(buf) != buf[len - 1]) {
 					fprintf(stderr,"bad sum\n");
 					bufp = 0;
 					continue;
@@ -190,13 +191,13 @@ void hid_keyboard_handler(uint8_t *pkt) {
 	ev.u.input.size = 8;
 
 	len = pktlen(pkt);
-	if ((len - 4 - 1) != (8 * 2)) {
+	if ((len - 4 - 1) != (8 * 2 + 1)) {
 		return;
 	}
 	char buf[5];
 	buf[0] = '0';
 	buf[1] = 'x';
-	for (i = (KHDR_TYPE + 1), j = 0; i < (len - 1) && (j < 8);) {
+	for (i = (KHDR_SUBTYPE + 1), j = 0; i < (len - 1) && (j < 8);) {
 		buf[2] = pkt[i];
 		i++;
 		buf[3] = pkt[i];
@@ -212,7 +213,7 @@ void log_handler(uint8_t *pkt) {
 	int i;
 	int len;
 	len = pktlen(pkt);
-	for (i = (KHDR_TYPE + 1); i < (len - 1); i++) {
+	for (i = (KHDR_SUBTYPE + 1); i < (len - 1); i++) {
 		putchar(pkt[i]);
 	}
 	putchar('\n');
@@ -284,22 +285,24 @@ int main(int argc, char *argv[]) {
 		ewrite(uhid_fd, &ev, sizeof(ev));
 	}
 
-	uint8_t pkt[PKT_BUFSIZE];
+	uint8_t pkt[PKT_BUFSIZE + 100]; // rev some space
 	while (1) {
 		recvpkt(serdev_fd, pkt, PKT_BUFSIZE);
-		switch(pkt[KHDR_TYPE]) {
-		case 'K':
-			if (use_serial_keyboard) {
-				hid_keyboard_handler(pkt);
+		if (pkt[KHDR_TYPE] == 'T') { // text
+			switch(pkt[KHDR_SUBTYPE]) { // sub type, in data field
+			case 'K':
+				if (use_serial_keyboard) {
+					hid_keyboard_handler(pkt);
+				}
+				break;
+			case 'L':
+				log_handler(pkt);
+				break;
+			default:
+				fprintf(stderr, "packet type '%c' not support\n",
+					pkt[KHDR_TYPE]);
+				break;
 			}
-			break;
-		case 'L':
-			log_handler(pkt);
-			break;
-		default:
-			fprintf(stderr, "packet type '%c' not support\n",
-				pkt[KHDR_TYPE]);
-			break;
 		}
 	}
 }
