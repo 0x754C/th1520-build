@@ -1,5 +1,6 @@
 [Unit]
 Description=cst3240 touchpad userspace driver
+CPUSchedulingPriority=99
 
 [Service]
 ExecStart=/usr/local/bin/cst3240-uinput
