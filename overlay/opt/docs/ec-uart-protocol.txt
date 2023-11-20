@@ -4,8 +4,9 @@ format:
 
 // ref: kproto.pdf
 //  A simple protocol like kermit:
-// [MARK][LEN][SEQ][TYPE][DATA ...][SUM][CR][LF]
+// [MARK][LEN][SEQ][TYPE][ [SUBTYPE] DATA ...][SUM][CR][LF]
 //            |<------LEN - 32-------->|
 //       |<--------SUMRANGE------>|
+// SUBTYPE is not part of kermit protocol
 
 example in usr/local/src/sipeed-ec-daemon/sipeed-ec-daemon.c
