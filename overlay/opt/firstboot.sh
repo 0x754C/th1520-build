@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# delay some time before setup
-sleep 20
+# stop touchpad userspace driver
+systemctl stop cst3240
 
 PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export PATH
