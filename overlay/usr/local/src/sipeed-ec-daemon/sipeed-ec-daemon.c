@@ -133,7 +133,18 @@ uint8_t mksum(uint8_t *buf) {
 	return tosum(sum);
 }
 
-int recvpkt(int fd, uint8_t *buf, int bufsize) {
+void reply(int fd, uint8_t *buf, uint8_t type, int seq) {
+	buf[KHDR_MARK] = SOH;
+	buf[KHDR_LEN] = tochar(3); // no data filed just header & sum
+	buf[KHDR_SEQ] = tochar(seq);
+	buf[KHDR_TYPE] = type;
+	buf[KHDR_TYPE+1] = mksum(buf);
+	ewrite(fd, buf, pktlen(buf));
+}
+
+uint64_t badsum_count = 0;
+
+int recvpkt(int fd, uint8_t *buf, int bufsize, uint8_t *rbuf) {
 	int bufp;
 	bufp = 0;
 
@@ -170,10 +181,14 @@ int recvpkt(int fd, uint8_t *buf, int bufsize) {
 			len = pktlen(buf);
 			if (bufp >= (len - 1)) {
 				if (mksum(buf) != buf[len - 1]) {
-					fprintf(stderr,"bad sum\n");
+					badsum_count++;
+					fprintf(stderr,"bad sum, seq is %d, type is %c\n", unchar(buf[KHDR_SEQ]), buf[KHDR_TYPE]);
+					fprintf(stderr,"bad sum count: %lu\n", badsum_count);
 					bufp = 0;
+					reply(fd, rbuf, 'N', unchar(buf[KHDR_SEQ]));
 					continue;
 				} else {
+					reply(fd, rbuf, 'Y', unchar(buf[KHDR_SEQ]));
 					return len;
 				}
 			}
@@ -246,7 +261,7 @@ int main(int argc, char *argv[]) {
 	}
 
 
-	serdev_fd = open(argv[1], O_RDONLY);
+	serdev_fd = open(argv[1], O_RDWR);
 	if (serdev_fd < 0) {
 		perror("open serdev");
 		exit(EXIT_FAILURE);
@@ -286,8 +301,9 @@ int main(int argc, char *argv[]) {
 	}
 
 	uint8_t pkt[PKT_BUFSIZE + 100]; // rev some space
+	uint8_t rpkt[PKT_BUFSIZE + 100]; // replay buf
 	while (1) {
-		recvpkt(serdev_fd, pkt, PKT_BUFSIZE);
+		recvpkt(serdev_fd, pkt, PKT_BUFSIZE, rpkt);
 		if (pkt[KHDR_TYPE] == 'T') { // text
 			switch(pkt[KHDR_SUBTYPE]) { // sub type, in data field
 			case 'K':
