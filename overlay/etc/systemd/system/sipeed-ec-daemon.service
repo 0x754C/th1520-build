@@ -2,7 +2,7 @@
 Description=sipeed userspace driver daemon
 
 [Service]
-ExecStart=/usr/local/bin/sipeed-ec-daemon /dev/ttyS3 921600 -k
+ExecStart=/usr/local/bin/sipeed-ec-daemon /dev/ttyS3 921600
 Nice=-18
 
 [Install]
