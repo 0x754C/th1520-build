@@ -3,7 +3,7 @@ Description=sipeed userspace driver daemon
 
 [Service]
 ExecStart=/usr/local/bin/sipeed-ec-daemon /dev/ttyS3 576000 -k
-CPUSchedulingPriority=99
+Nice=-18
 
 [Install]
 WantedBy=multi-user.target
