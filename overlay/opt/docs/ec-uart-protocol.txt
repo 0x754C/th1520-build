@@ -1,4 +1,4 @@
-ec send data into TH1520's UART3, baurate is 576000
+ec send data into TH1520's UART3, baurate is 921600
 
 format:
 
