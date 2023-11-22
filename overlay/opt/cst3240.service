@@ -2,7 +2,7 @@
 Description=cst3240 touchpad userspace driver
 
 [Service]
-ExecStart=/usr/local/bin/cst3240-uinput
+ExecStart=/opt/cst3240-uinput
 Nice=-18
 
 

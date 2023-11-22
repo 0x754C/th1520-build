@@ -1,5 +1,8 @@
 #!/bin/sh
 
+PATH=/opt:$PATH
+export PATH
+
 if !(which wchisp);
 then
 	echo "wchisp not found"
