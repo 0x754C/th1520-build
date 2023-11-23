@@ -17,7 +17,7 @@ hex2mac() {
 INFO="${1}"
 NAME=$(echo $INFO | awk -F'-' '{print $1}')
 MAC0HEX=$(echo $INFO | awk -F'-' '{print $3}')
-MAC1HEX=$(echo $MAC0HEX 1 | dc -e '16o16i?+p')
+MAC1HEX=$(echo $MAC0HEX 1 | /opt/busybox dc -e '16o16i?+p')
 
 if [ "$NAME" != "LM4A0" ]
 then
@@ -31,15 +31,15 @@ MAC1=$(hex2mac $MAC1HEX)
 echo "end0: $MAC0"
 echo "end1: $MAC1"
 
-fw_setenv ethaddr $MAC0
-fw_setenv eth1addr $MAC1
+/opt/fw_setenv ethaddr $MAC0
+/opt/fw_setenv eth1addr $MAC1
 
-fw_printenv ethaddr
-fw_printenv eth1addr
+/opt/fw_printenv ethaddr
+/opt/fw_printenv eth1addr
 
 # hostname with mac address
 OLD_HOSTNAME=$(cat /etc/hostname)
-NEW_HOSTNAME="lpi4a-$(echo $MAC0 | tr -d ':\n' | tail -c 4)"
+NEW_HOSTNAME="lpi4a$(echo $MAC0 | tr -d ':\n' | tail -c 4)"
 
 for file in /etc/hostname /etc/hosts
 do
@@ -48,5 +48,4 @@ done
 nmcli general hostname "$NEW_HOSTNAME"
 hostname "$NEW_HOSTNAME"
 
-# restart avahi daemon
-systemctl restart avahi-daemon
+echo "mac address change ok"
