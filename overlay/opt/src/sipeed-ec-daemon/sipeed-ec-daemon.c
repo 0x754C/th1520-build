@@ -185,10 +185,10 @@ int recvpkt(int fd, uint8_t *buf, int bufsize, uint8_t *rbuf) {
 					fprintf(stderr,"bad sum, seq is %d, type is %c\n", unchar(buf[KHDR_SEQ]), buf[KHDR_TYPE]);
 					fprintf(stderr,"bad sum count: %lu\n", badsum_count);
 					bufp = 0;
-					reply(fd, rbuf, 'N', unchar(buf[KHDR_SEQ]));
+					//reply(fd, rbuf, 'N', unchar(buf[KHDR_SEQ]));
 					continue;
 				} else {
-					reply(fd, rbuf, 'Y', unchar(buf[KHDR_SEQ]));
+					//reply(fd, rbuf, 'Y', unchar(buf[KHDR_SEQ]));
 					return len;
 				}
 			}
