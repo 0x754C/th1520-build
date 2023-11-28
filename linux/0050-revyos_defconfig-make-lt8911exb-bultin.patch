@@ -1,0 +1,25 @@
+From 880e0a116c7cd13d69328071900395ed9b25d2f9 Mon Sep 17 00:00:00 2001
+From: Lu Hui <luhui@sipeed.com>
+Date: Tue, 28 Nov 2023 09:21:19 +0800
+Subject: [PATCH 50/52] revyos_defconfig: make lt8911exb bultin
+
+---
+ arch/riscv/configs/revyos_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
+index eb6a6dcd3..cfad0200e 100644
+--- a/arch/riscv/configs/revyos_defconfig
++++ b/arch/riscv/configs/revyos_defconfig
+@@ -282,7 +282,7 @@ CONFIG_BACKLIGHT_PWM=y
+ CONFIG_FRAMEBUFFER_CONSOLE=y
+ CONFIG_FRAMEBUFFER_CONSOLE_ROTATION=y
+ CONFIG_LOGO=y
+-CONFIG_DRM_I2C_LT8911EXB=m
++CONFIG_DRM_I2C_LT8911EXB=y
+ CONFIG_SOUND=y
+ CONFIG_SND=y
+ CONFIG_SND_USB_AUDIO=m
+-- 
+2.34.1
+
