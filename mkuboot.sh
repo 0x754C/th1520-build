@@ -75,3 +75,12 @@ make clean
 make light_lpi4a_z14inch_m0_16g_defconfig
 make -j$(nproc)
 cp u-boot-with-spl.bin ../u-boot-with-spl-z14inch-m0-16g.bin
+make clean
+make light_lpi4a_z14inch_m2_defconfig
+make -j$(nproc)
+cp u-boot-with-spl.bin ../u-boot-with-spl-z14inch-m2.bin
+make clean
+make light_lpi4a_z14inch_m2_16g_defconfig
+make -j$(nproc)
+cp u-boot-with-spl.bin ../u-boot-with-spl-z14inch-m2-16g.bin
+mv ../u-boot*.bin ../../overlay/opt/
