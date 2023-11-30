@@ -52,3 +52,4 @@ sleep 0.5
 boot_high
 wchisp config reset
 wchisp flash $1
+boot_low
