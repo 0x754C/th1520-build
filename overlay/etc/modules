@@ -20,3 +20,6 @@ snd-soc-bt-sco
 snd-soc-es7210
 snd-soc-es8156
 snd-soc-wm8960
+sd-mod
+usb-storage
+cw2015_battery
