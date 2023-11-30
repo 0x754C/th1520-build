@@ -1,0 +1,25 @@
+From aeb4b63b92e1427548b02eda577a3152df02a6f0 Mon Sep 17 00:00:00 2001
+From: Lu Hui <luhui@sipeed.com>
+Date: Thu, 30 Nov 2023 11:15:52 +0800
+Subject: [PATCH 53/53] revyos_defconfig: build cw2015 as a module
+
+---
+ arch/riscv/configs/revyos_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
+index 213abda5d..f2d498d02 100644
+--- a/arch/riscv/configs/revyos_defconfig
++++ b/arch/riscv/configs/revyos_defconfig
+@@ -215,7 +215,7 @@ CONFIG_GPIO_DWAPB=y
+ CONFIG_GPIO_PCA953X=y
+ CONFIG_GPIO_PCA953X_IRQ=y
+ CONFIG_POWER_SUPPLY=y
+-CONFIG_BATTERY_CW2015=y
++CONFIG_BATTERY_CW2015=m
+ CONFIG_CHARGER_GPIO=y
+ CONFIG_SENSORS_MR75203=y
+ CONFIG_SENSORS_PWM_FAN=y
+-- 
+2.34.1
+
