@@ -3,6 +3,7 @@
 # thank ice
 if (cat /proc/device-tree/model | grep LicheeConsole4A);
 then
+	xinput set-prop 'ydx' 'Coordinate Transformation Matrix' 1 0 0 0 1 0 0 0 1
 	ROTATE=1
 else
 	ROTATE=0
@@ -33,4 +34,3 @@ else
 	fi
     fi
 fi
-
