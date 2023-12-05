@@ -5,4 +5,5 @@ overlay/boot/System.map-5.10.113+
 overlay/boot/dtbs/*
 overlay/usr/lib/modules/*
 overlay/opt/u-boot-with-spl*.bin
+overlay/opt/vmlinux
 build/*
