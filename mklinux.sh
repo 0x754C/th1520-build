@@ -57,3 +57,4 @@ cp -r ./*/thead ./
 cd ../../../
 cp -r _install/boot ../../overlay/
 cp -r _install/lib/modules ../../overlay/usr/lib/
+cp -v vmlinux ../../overlay/opt/vmlinux
