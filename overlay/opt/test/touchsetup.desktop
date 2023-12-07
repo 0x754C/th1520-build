@@ -3,5 +3,5 @@ Type=Application
 Version=1.0
 Name=touch-setup
 Path=/opt/
-Exec=/opt/console-setup.sh
+Exec=/opt/touch-setup.sh
 Terminal=true
