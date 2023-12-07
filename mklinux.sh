@@ -14,7 +14,10 @@ fi
 
 if [ -z "$CROSS_COMPILE" ]
 then
-	export CROSS_COMPILE="riscv64-linux-gnu-"
+	# toolchain from vendor
+	export CROSS_COMPILE="riscv64-unknown-linux-gnu-"
+	# generic toolchain
+	#export CROSS_COMPILE="riscv64-linux-gnu-"
 fi
 
 if [ -z "$CONFIG" ]
