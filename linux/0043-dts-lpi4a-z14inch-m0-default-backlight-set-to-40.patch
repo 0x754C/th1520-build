@@ -1,7 +1,7 @@
-From a4b75bacc1e099d52f80c73a1ab566e0e80d9e59 Mon Sep 17 00:00:00 2001
+From 8c1b61f01e2b13f9021a7b27895fbe5190429de2 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 24 Nov 2023 14:02:19 +0800
-Subject: [PATCH 47/47] dts: lpi4a-z14inch-m0: default backlight set to 40
+Subject: [PATCH 43/53] dts: lpi4a-z14inch-m0: default backlight set to 40
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-z14inch-m0.dts | 4 ++++

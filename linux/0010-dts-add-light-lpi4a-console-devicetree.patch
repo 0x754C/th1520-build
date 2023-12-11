@@ -1,7 +1,7 @@
-From a7f5cec12159e6504d5ffcd55afbb0877f0ea2a4 Mon Sep 17 00:00:00 2001
+From 335b20cb094f29d4dc4795bf459f85572f67bd94 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
-Date: Thu, 2 Nov 2023 14:41:34 +0800
-Subject: [PATCH 10/13] dts: light-lpi4a-console: add LicheeConsole devicetree
+Date: Mon, 11 Dec 2023 12:44:24 +0800
+Subject: [PATCH 10/53] dts: add light-lpi4a-console devicetree
 
 ---
  arch/riscv/boot/dts/thead/Makefile            |  1 +
@@ -10,7 +10,7 @@ Subject: [PATCH 10/13] dts: light-lpi4a-console: add LicheeConsole devicetree
  create mode 100644 arch/riscv/boot/dts/thead/light-lpi4a-console.dts
 
 diff --git a/arch/riscv/boot/dts/thead/Makefile b/arch/riscv/boot/dts/thead/Makefile
-index f5ead3e5c..af4868d45 100644
+index 3e8e962f9..3d6916ec6 100644
 --- a/arch/riscv/boot/dts/thead/Makefile
 +++ b/arch/riscv/boot/dts/thead/Makefile
 @@ -47,6 +47,7 @@ dtb-$(CONFIG_SOC_THEAD) += fire-emu.dtb fire-emu-crash.dtb
@@ -18,9 +18,9 @@ index f5ead3e5c..af4868d45 100644
  dtb-$(CONFIG_SOC_THEAD) += fire-emu-soc-base-sec.dtb
  dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-laptop.dtb
 +dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-console.dtb
+ dtb-$(CONFIG_SOC_THEAD) += light-milkv-meles.dtb light-milkv-meles-4g.dtb
  
  targets += dtbs dtbs_install
- targets += $(dtb-y)
 diff --git a/arch/riscv/boot/dts/thead/light-lpi4a-console.dts b/arch/riscv/boot/dts/thead/light-lpi4a-console.dts
 new file mode 100644
 index 000000000..4ab4f5a23

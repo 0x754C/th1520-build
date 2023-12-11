@@ -1,7 +1,7 @@
-From f03e07c4365b5c173809a0acf9b8a832c21d1c4f Mon Sep 17 00:00:00 2001
+From 429f654b6854df4a9aa56ea915df678815def735 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 9 Nov 2023 15:10:29 +0800
-Subject: [PATCH 24/24] Revert "sound: limit es8156 volume"
+Subject: [PATCH 24/53] Revert "sound: limit es8156 volume"
 
 This reverts commit d24623adf3e2feeb9adf9367502e089d7d0cbc59.
 ---

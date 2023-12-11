@@ -1,17 +1,17 @@
-From 3a8dd97256eb87083b70eb7ef43f0478d197d871 Mon Sep 17 00:00:00 2001
+From 06fb771c7ed1a78d8ba87da75e01fe0deddb079d Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 11:07:00 +0800
-Subject: [PATCH 02/13] revyos_defconfig: enable lt8911exb driver
+Subject: [PATCH 02/53] revyos_defconfig: enable lt8911exb driver
 
 ---
  arch/riscv/configs/revyos_defconfig | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index 57fd55163..85db2df4c 100644
+index 1db8e7dd6..fbd2a7fde 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
-@@ -270,6 +270,7 @@ CONFIG_BACKLIGHT_CLASS_DEVICE=y
+@@ -282,6 +282,7 @@ CONFIG_BACKLIGHT_CLASS_DEVICE=y
  CONFIG_BACKLIGHT_PWM=y
  CONFIG_FRAMEBUFFER_CONSOLE=y
  CONFIG_LOGO=y

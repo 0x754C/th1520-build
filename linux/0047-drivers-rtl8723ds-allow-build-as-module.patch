@@ -1,7 +1,7 @@
-From 786af82fa46856c6d0bf9e5649adaa6adae024d2 Mon Sep 17 00:00:00 2001
+From 7f376b9428aae0b80906b5a2e7171891a2bdbc07 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Tue, 28 Nov 2023 11:02:43 +0800
-Subject: [PATCH 51/52] drivers: rtl8723ds: allow build as module
+Subject: [PATCH 47/53] drivers: rtl8723ds: allow build as module
 
 ---
  drivers/net/wireless/rtl8723ds/os_dep/linux/os_intfs.c | 2 ++

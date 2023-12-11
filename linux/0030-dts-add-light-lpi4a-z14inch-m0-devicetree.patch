@@ -1,7 +1,7 @@
-From f892d8bc973b850cedd7fbd96a4dfd2edb9d2580 Mon Sep 17 00:00:00 2001
+From cf5db8ed83e1030f4a483be5a515fdb597a52385 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
-Date: Thu, 16 Nov 2023 10:22:52 +0800
-Subject: [PATCH 30/30] dts: add light-lpi4a-z14inch-m0.dts
+Date: Mon, 11 Dec 2023 12:49:31 +0800
+Subject: [PATCH 30/53] dts: add light-lpi4a-z14inch-m0 devicetree
 
 ---
  arch/riscv/boot/dts/thead/Makefile            |  1 +
@@ -10,7 +10,7 @@ Subject: [PATCH 30/30] dts: add light-lpi4a-z14inch-m0.dts
  create mode 100644 arch/riscv/boot/dts/thead/light-lpi4a-z14inch-m0.dts
 
 diff --git a/arch/riscv/boot/dts/thead/Makefile b/arch/riscv/boot/dts/thead/Makefile
-index 5483a8366..3a92c5e10 100644
+index 49510ef48..25a62c7f2 100644
 --- a/arch/riscv/boot/dts/thead/Makefile
 +++ b/arch/riscv/boot/dts/thead/Makefile
 @@ -48,6 +48,7 @@ dtb-$(CONFIG_SOC_THEAD) += fire-emu-soc-base.dtb fire-emu-soc-c910x4.dtb fire-em
@@ -20,7 +20,7 @@ index 5483a8366..3a92c5e10 100644
 +dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-z14inch-m0.dtb
  dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-z14inch-m1.dtb
  dtb-$(CONFIG_SOC_THEAD) += light-lpi4a-z15inch-m1.dtb
- 
+ dtb-$(CONFIG_SOC_THEAD) += light-milkv-meles.dtb light-milkv-meles-4g.dtb
 diff --git a/arch/riscv/boot/dts/thead/light-lpi4a-z14inch-m0.dts b/arch/riscv/boot/dts/thead/light-lpi4a-z14inch-m0.dts
 new file mode 100644
 index 000000000..c4c50ed3b

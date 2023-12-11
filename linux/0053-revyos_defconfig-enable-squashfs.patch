@@ -1,17 +1,17 @@
-From 120a88a2c10f17c3649e6ebab5e2b0a83808dfa4 Mon Sep 17 00:00:00 2001
+From acf21ac5224367d3d2084ceb09c191d7dd4dec7c Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Wed, 6 Dec 2023 17:44:34 +0800
-Subject: [PATCH 57/57] revyos_defconfig: enable squashfs
+Subject: [PATCH 53/53] revyos_defconfig: enable squashfs
 
 ---
  arch/riscv/configs/revyos_defconfig | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index f9ddce404..a253c05fc 100644
+index eec973fb2..4ecc7501e 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
-@@ -442,6 +442,10 @@ CONFIG_TMPFS_POSIX_ACL=y
+@@ -455,6 +455,10 @@ CONFIG_TMPFS_POSIX_ACL=y
  CONFIG_HUGETLBFS=y
  CONFIG_JFFS2_FS=y
  CONFIG_UBIFS_FS=y

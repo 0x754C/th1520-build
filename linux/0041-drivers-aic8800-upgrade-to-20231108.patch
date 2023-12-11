@@ -1,7 +1,7 @@
-From b069be7299c8c73269e827344f50a2428758d171 Mon Sep 17 00:00:00 2001
+From d62ab5eb172e700c2a26ec042cef79160f7fe2fa Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Tue, 21 Nov 2023 17:29:58 +0800
-Subject: [PATCH 45/45] drivers: aic8800: upgrade to 20231108
+Subject: [PATCH 41/53] drivers: aic8800: upgrade to 20231108
 
 ---
  drivers/net/wireless/aic8800/Makefile         |  18 +-

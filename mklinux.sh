@@ -14,7 +14,7 @@ fi
 
 if [ -z "$COMMIT" ]
 then
-	export COMMIT="3e042d29a35059a459aabedecd15010292ce5fca"
+	export COMMIT="b8c5d354603d9833a4ee89bf0473f0753cad168f"
 fi
 
 if [ -z "$CROSS_COMPILE" ]

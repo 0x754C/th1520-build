@@ -1,7 +1,7 @@
-From 671201d853c639ce52de5be596c486311dae35cc Mon Sep 17 00:00:00 2001
+From bba540473807edd3dde313f9a0604dfd673e5eef Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 13 Nov 2023 11:52:10 +0800
-Subject: [PATCH 25/27] drivers: add 1920x1080_60Hz dsi panel
+Subject: [PATCH 25/53] drivers: add 1920x1080_60Hz dsi panel
 
 ---
  drivers/gpu/drm/panel/panel-simple.c | 32 ++++++++++++++++++++++++++++

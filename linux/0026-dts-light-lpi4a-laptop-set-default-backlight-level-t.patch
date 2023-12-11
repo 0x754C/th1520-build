@@ -1,7 +1,7 @@
-From 08838a67e25a3394ac702d2da4e959f289b7c31b Mon Sep 17 00:00:00 2001
+From 7cb0dd71b85e9a6568627b2819c7af41634265cb Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 13 Nov 2023 11:52:58 +0800
-Subject: [PATCH 26/27] dts: light-lpi4a-laptop: set default backlight level to
+Subject: [PATCH 26/53] dts: light-lpi4a-laptop: set default backlight level to
  100
 
 ---

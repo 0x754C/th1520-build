@@ -1,7 +1,7 @@
-From 23d188d9809945210d41d24f0ef3965f47c43b63 Mon Sep 17 00:00:00 2001
+From 96ae04fc9ea5ce91b52e02c08a34ff66942d2f68 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Wed, 8 Nov 2023 17:10:26 +0800
-Subject: [PATCH 21/23] dts: light-lpi4a-laptop: add sata 5v en pin
+Subject: [PATCH 21/53] dts: light-lpi4a-laptop: add sata 5v en pin
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts | 12 ++++++++++++

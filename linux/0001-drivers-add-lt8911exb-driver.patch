@@ -1,7 +1,7 @@
-From efc1a39ceec92647c045133c6aa934d11bccde56 Mon Sep 17 00:00:00 2001
+From 544b73bf9b141a251609fadeea3dfcb13d5a1998 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 11:06:13 +0800
-Subject: [PATCH 01/13] drivers: add lt8911exb driver
+Subject: [PATCH 01/53] drivers: add lt8911exb driver
 
 ---
  drivers/gpu/drm/i2c/Kconfig     |    3 +

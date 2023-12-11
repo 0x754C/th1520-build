@@ -1,17 +1,17 @@
-From 1423c31b59f9f45bba555e6146a81619e5e36d75 Mon Sep 17 00:00:00 2001
+From ff039c626ecaa0500481ee56ea6b535ea70b5770 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 4 Dec 2023 15:16:05 +0800
-Subject: [PATCH 54/55] enable pstore
+Subject: [PATCH 50/53] enable pstore
 
 ---
  arch/riscv/configs/revyos_defconfig | 10 +++++++++-
  1 file changed, 9 insertions(+), 1 deletion(-)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index f2d498d02..f9ddce404 100644
+index a31fb14ae..eec973fb2 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
-@@ -477,9 +477,17 @@ CONFIG_CMA_SIZE_MBYTES=32
+@@ -490,9 +490,17 @@ CONFIG_CMA_SIZE_MBYTES=32
  CONFIG_PRINTK_TIME=y
  CONFIG_DYNAMIC_DEBUG=y
  CONFIG_DEBUG_INFO=y

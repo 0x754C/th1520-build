@@ -1,7 +1,7 @@
-From d6ae03ac83efe14b2fb5a9f5c35ec0313d27f346 Mon Sep 17 00:00:00 2001
+From a819e3e119126892675ee5c7c720317b05005a31 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 24 Nov 2023 18:52:52 +0800
-Subject: [PATCH 49/49] sound: es8156: limit max volume to 170
+Subject: [PATCH 45/53] sound: es8156: limit max volume to 170
 
 ---
  sound/soc/codecs/es8156.c | 6 ++++--

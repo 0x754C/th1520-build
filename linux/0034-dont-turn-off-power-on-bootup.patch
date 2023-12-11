@@ -1,14 +1,14 @@
-From 718ae9c1c7ab37d3cc73aa221f74716c06a64b24 Mon Sep 17 00:00:00 2001
+From 9bcb1079ce149ae09dd8bbdef6f1d67ec89d9b72 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 17 Nov 2023 18:38:26 +0800
-Subject: [PATCH 37/37] dont turn off power on bootup
+Subject: [PATCH 34/53] dont turn off power on bootup
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts | 10 +++++++++-
  1 file changed, 9 insertions(+), 1 deletion(-)
 
 diff --git a/arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts b/arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts
-index 175a64a28..56219f418 100644
+index 8fffedc51..5a2aeaf1e 100644
 --- a/arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts
 +++ b/arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts
 @@ -16,6 +16,7 @@ reg_sys_vcc_5v: regulator-sys-vcc-5v-en {

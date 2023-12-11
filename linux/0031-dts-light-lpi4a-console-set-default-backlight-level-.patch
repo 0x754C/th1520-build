@@ -1,7 +1,7 @@
-From 9435efa3a071ff7e6b1c38f37e62341b287aa420 Mon Sep 17 00:00:00 2001
+From b830cd8f37ed043065153d81161193b645d16cde Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 16 Nov 2023 15:36:18 +0800
-Subject: [PATCH 31/32] dts: light-lpi4a-console: set default backlight level
+Subject: [PATCH 31/53] dts: light-lpi4a-console: set default backlight level
  50
 
 ---

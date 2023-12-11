@@ -1,7 +1,7 @@
-From 76b5b20ca89f426e3941ffc593d93b934feb431f Mon Sep 17 00:00:00 2001
+From bef44cb7a058eb5efefc2b5242b8a4da91b967c1 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Wed, 8 Nov 2023 11:06:58 +0800
-Subject: [PATCH 18/19] drivers: panel: add custom 14inch_1920x1200_54Hz dsi
+Subject: [PATCH 18/53] drivers: panel: add custom 14inch_1920x1200_54Hz dsi
  panel
 
 ---

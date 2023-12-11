@@ -1,14 +1,14 @@
-From e4d6c5b790c7d7202061e625ce8873c549a1b569 Mon Sep 17 00:00:00 2001
+From 72f94f4ad45da91a33ae54040fdaa727c5359e7c Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Tue, 28 Nov 2023 11:04:01 +0800
-Subject: [PATCH 52/52] revyos_defconfig: build some driver as module
+Subject: [PATCH 48/53] revyos_defconfig: build some driver as module
 
 ---
  arch/riscv/configs/revyos_defconfig | 80 ++++++++++++++++-------------
  1 file changed, 44 insertions(+), 36 deletions(-)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index cfad0200e..213abda5d 100644
+index 454a39ef0..fdfee8429 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
 @@ -65,6 +65,8 @@ CONFIG_PACKET=y
@@ -20,7 +20,7 @@ index cfad0200e..213abda5d 100644
  CONFIG_NF_TABLES=m
  CONFIG_NF_TABLES_INET=y
  CONFIG_NF_TABLES_NETDEV=y
-@@ -116,18 +118,19 @@ CONFIG_VSOCKETS=y
+@@ -128,18 +130,19 @@ CONFIG_VSOCKETS=y
  CONFIG_VIRTIO_VSOCKETS=y
  CONFIG_NETLINK_DIAG=y
  CONFIG_CGROUP_NET_PRIO=y
@@ -49,7 +49,7 @@ index cfad0200e..213abda5d 100644
  CONFIG_PCI=y
  CONFIG_DEVTMPFS=y
  CONFIG_DEVTMPFS_MOUNT=y
-@@ -143,30 +146,35 @@ CONFIG_BLK_DEV_LOOP=y
+@@ -155,30 +158,35 @@ CONFIG_BLK_DEV_LOOP=y
  CONFIG_VIRTIO_BLK=y
  CONFIG_LIGHT_DSMART_CARD=y
  CONFIG_EEPROM_AT24=y
@@ -100,7 +100,7 @@ index cfad0200e..213abda5d 100644
  CONFIG_AIC_WLAN_SUPPORT=y
  CONFIG_AIC_FW_PATH="/lib/firmware/aic8800"
  CONFIG_AIC8800_WLAN_SUPPORT=m
-@@ -207,7 +215,7 @@ CONFIG_GPIO_DWAPB=y
+@@ -219,7 +227,7 @@ CONFIG_GPIO_DWAPB=y
  CONFIG_GPIO_PCA953X=y
  CONFIG_GPIO_PCA953X_IRQ=y
  CONFIG_POWER_SUPPLY=y
@@ -109,7 +109,7 @@ index cfad0200e..213abda5d 100644
  CONFIG_CHARGER_GPIO=y
  CONFIG_SENSORS_MR75203=y
  CONFIG_SENSORS_PWM_FAN=y
-@@ -283,18 +291,18 @@ CONFIG_FRAMEBUFFER_CONSOLE=y
+@@ -295,18 +303,18 @@ CONFIG_FRAMEBUFFER_CONSOLE=y
  CONFIG_FRAMEBUFFER_CONSOLE_ROTATION=y
  CONFIG_LOGO=y
  CONFIG_DRM_I2C_LT8911EXB=y

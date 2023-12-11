@@ -1,7 +1,7 @@
-From d7c797ca8c5e13f83e131fd4eb44ecf3e52519bf Mon Sep 17 00:00:00 2001
+From 6f05052b3cf494255fd7d5d9c0b4c83be8e2d386 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 24 Nov 2023 14:26:36 +0800
-Subject: [PATCH 48/48] dts: light-lpi4a-laptop: cpu 300Mhz use 0.5V voltage
+Subject: [PATCH 44/53] dts: light-lpi4a-laptop: cpu 300Mhz use 0.5V voltage
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts | 8 ++++----

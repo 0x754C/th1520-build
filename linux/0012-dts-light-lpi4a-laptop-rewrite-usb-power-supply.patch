@@ -1,7 +1,7 @@
-From 1270050f55f214b06b4efc4a693a75ab1445415e Mon Sep 17 00:00:00 2001
+From 3a1eebfecb497ffce712a08ea83da12962c4c405 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 16:14:52 +0800
-Subject: [PATCH 12/13] dts: light-lpi4a-laptop: rewrite usb power supply
+Subject: [PATCH 12/53] dts: light-lpi4a-laptop: rewrite usb power supply
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts | 6 ++++++

@@ -1,7 +1,7 @@
-From d8c8e31ffb85eae21691919ffb9e0aa65838cf6b Mon Sep 17 00:00:00 2001
+From 7100f8e7f578c5f1310bd7383db163b7692fab6b Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 2 Nov 2023 14:30:59 +0800
-Subject: [PATCH 03/13] drviers: add ydx trackpoint, thank ice
+Subject: [PATCH 03/53] drviers: add ydx trackpoint, thank ice
 
 ---
  drivers/input/mouse/Kconfig  |   6 ++

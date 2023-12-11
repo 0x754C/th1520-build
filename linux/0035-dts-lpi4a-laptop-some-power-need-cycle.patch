@@ -1,7 +1,7 @@
-From 98ee4521f778e9c16b0708cd2f44137e624d4e3b Mon Sep 17 00:00:00 2001
+From 9208f2e68765518ef059154f7ea8b3f4b551513a Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 20 Nov 2023 15:51:17 +0800
-Subject: [PATCH 39/40] dts: lpi4a-laptop: some power need cycle
+Subject: [PATCH 35/53] dts: lpi4a-laptop: some power need cycle
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-laptop.dts | 3 ---

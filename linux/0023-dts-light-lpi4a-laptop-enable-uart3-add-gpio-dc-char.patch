@@ -1,7 +1,7 @@
-From fef7d8f567ff74ce708e9c0f707b28aa8253ff9a Mon Sep 17 00:00:00 2001
+From 2f230cafa29737ddfaedb325c902a4b05de5cc72 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 9 Nov 2023 13:54:05 +0800
-Subject: [PATCH 23/23] dts: light-lpi4a-laptop: enable uart3, add gpio
+Subject: [PATCH 23/53] dts: light-lpi4a-laptop: enable uart3, add gpio
  dc-charger
 
 ---

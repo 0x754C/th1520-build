@@ -1,7 +1,7 @@
-From 9f196a6523a939adcbba305ca4e0e5bb4db072c9 Mon Sep 17 00:00:00 2001
+From 4807f698347d36f8698c5c6f59fd701f4e5c8f07 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Wed, 8 Nov 2023 17:04:28 +0800
-Subject: [PATCH 20/23] dts: light-lpi4a-console: move ydx from i2c0 to i2c2
+Subject: [PATCH 20/53] dts: light-lpi4a-console: move ydx from i2c0 to i2c2
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-console.dts | 2 +-

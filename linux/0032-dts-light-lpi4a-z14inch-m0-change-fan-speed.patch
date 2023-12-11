@@ -1,7 +1,7 @@
-From 7da7cd5ce13d9c8ecc420e2be8dd4fcbff55401c Mon Sep 17 00:00:00 2001
+From 835b96b8bcd07989b71aaf0ac7e5b42c60b94193 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 16 Nov 2023 18:29:57 +0800
-Subject: [PATCH 32/32] dts: light-lpi4a-z14inch-m0: change fan speed
+Subject: [PATCH 32/53] dts: light-lpi4a-z14inch-m0: change fan speed
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-z14inch-m0.dts | 5 +++++

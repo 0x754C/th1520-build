@@ -1,17 +1,17 @@
-From e8b066d2a1f36637b1140b0b9e2c2044b6925bd1 Mon Sep 17 00:00:00 2001
+From a9d6359676f7203784dd99f163a7ad2406da3a48 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 13 Nov 2023 18:10:37 +0800
-Subject: [PATCH 28/28] revyos_defconfig: allow usb load by module
+Subject: [PATCH 28/53] revyos_defconfig: allow usb load by module
 
 ---
  arch/riscv/configs/revyos_defconfig | 15 ++++++++-------
  1 file changed, 8 insertions(+), 7 deletions(-)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index 7d97bbfa8..18bb523c9 100644
+index bf50586c6..fb6f0d059 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
-@@ -289,16 +289,17 @@ CONFIG_SND_SOC_WM8960=y
+@@ -301,16 +301,17 @@ CONFIG_SND_SOC_WM8960=y
  CONFIG_SND_SIMPLE_CARD=y
  CONFIG_SND_AUDIO_GRAPH_CARD=y
  CONFIG_UHID=y

@@ -1,7 +1,7 @@
-From b61740ac9e7c9ccc6e74aee7bf8f3ea11baf336c Mon Sep 17 00:00:00 2001
+From fe09fefa60dd59843e99b714e5e00924a5829db6 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Mon, 6 Nov 2023 16:35:47 +0800
-Subject: [PATCH 17/17] drivers: cw2015: be quite, dont repeat warn
+Subject: [PATCH 17/53] drivers: cw2015: be quite, dont repeat warn
 
 ---
  drivers/power/supply/cw2015_battery.c | 3 ++-

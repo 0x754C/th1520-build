@@ -1,14 +1,14 @@
-From 579625d5e015bbfd585114bb3db90f6f1f7cd777 Mon Sep 17 00:00:00 2001
+From e01eb2b0645612bf6a9a9f07eafb34945a0815b3 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Tue, 21 Nov 2023 16:25:21 +0800
-Subject: [PATCH 44/45] revyos_defconfig: add nftables
+Subject: [PATCH 40/53] revyos_defconfig: add nftables
 
 ---
  arch/riscv/configs/revyos_defconfig | 7 +++++++
  1 file changed, 7 insertions(+)
 
 diff --git a/arch/riscv/configs/revyos_defconfig b/arch/riscv/configs/revyos_defconfig
-index 2b2c13e28..eb6a6dcd3 100644
+index b20d3d652..fcc66465d 100644
 --- a/arch/riscv/configs/revyos_defconfig
 +++ b/arch/riscv/configs/revyos_defconfig
 @@ -65,6 +65,13 @@ CONFIG_PACKET=y

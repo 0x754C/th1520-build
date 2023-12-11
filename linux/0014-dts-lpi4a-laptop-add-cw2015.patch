@@ -1,7 +1,7 @@
-From 7bf2f20c8280d1efed6cebd6b4c24f386b7be3e4 Mon Sep 17 00:00:00 2001
+From 94533e32a6650676115d63232414a494051a58dd Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Fri, 3 Nov 2023 17:07:35 +0800
-Subject: [PATCH 14/15] dts: lpi4a-laptop: add cw2015
+Subject: [PATCH 14/53] dts: lpi4a-laptop: add cw2015
 
 ---
  arch/riscv/boot/dts/thead/light-lpi4a-console.dts | 13 +++++++++++++

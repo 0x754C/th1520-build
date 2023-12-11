@@ -1,7 +1,7 @@
-From ea5a10ee318637e79f3fad569b6c17046036f591 Mon Sep 17 00:00:00 2001
+From 86f206dbef6954ffb395cc33b35ebf0aef29ab01 Mon Sep 17 00:00:00 2001
 From: Lu Hui <luhui@sipeed.com>
 Date: Thu, 23 Nov 2023 13:38:03 +0800
-Subject: [PATCH 46/46] drivers: aic8800: disable debug log, enable debug fs
+Subject: [PATCH 42/53] drivers: aic8800: disable debug log, enable debug fs
 
 ---
  drivers/net/wireless/aic8800/aic8800_fdrv/Makefile | 4 ++--
