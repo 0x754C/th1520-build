@@ -12,6 +12,11 @@ then
 	export BRANCH="lpi4a"
 fi
 
+if [ -z "$COMMIT" ]
+then
+	export COMMIT="3e042d29a35059a459aabedecd15010292ce5fca"
+fi
+
 if [ -z "$CROSS_COMPILE" ]
 then
 	# toolchain from vendor
@@ -31,6 +36,7 @@ if [ ! -e build/linux ]
 then
 	git clone $URL build/linux --branch=${BRANCH}
 	cd build/linux
+	git reset --hard $COMMIT
 	find ../../linux/ -name *.patch | sort | while read line
 	do
 		patch -p1 < $line
