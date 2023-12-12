@@ -39,7 +39,7 @@ then
 	git reset --hard $COMMIT
 	find ../../linux/ -name *.patch | sort | while read line
 	do
-		patch -p1 < $line
+		git am $line
 	done
 	cd ../../
 fi
